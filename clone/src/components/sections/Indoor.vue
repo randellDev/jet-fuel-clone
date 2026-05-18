@@ -79,7 +79,6 @@ onUnmounted(() => {
         </div>
 
         <div class="images-container">
-          <!-- Row 1: full-width image on mobile, 2 images on desktop -->
           <div class="row">
             <div class="img-container grid2c">
               <img src="@/assets/images/IndoorIntelligence1.svg" />
@@ -89,7 +88,6 @@ onUnmounted(() => {
             </div>
           </div>
 
-          <!-- Row 2: middle 2 images — mobile only -->
           <div class="row hidden-on-desktop">
             <div class="img-container">
               <img src="@/assets/images/IndoorIntelligence2.jpg" />
@@ -99,7 +97,6 @@ onUnmounted(() => {
             </div>
           </div>
 
-          <!-- Row 3: bottom images -->
           <div class="row">
             <div class="img-container hidden-on-mobile">
               <img src="@/assets/images/IndoorIntelligence3.jpg" />
