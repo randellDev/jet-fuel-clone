@@ -436,6 +436,13 @@ section.jf-section--indoor-intelligence {
           margin-bottom: 32px;
           padding: 0 8px;
         }
+
+        @media (max-width: 830px) {
+          font-size: 15px;
+          margin-left: 0;
+          margin-bottom: 24px;
+          padding: 0 8px;
+        }
       }
     }
   }
