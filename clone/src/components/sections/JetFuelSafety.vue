@@ -534,7 +534,7 @@ onUnmounted(() => {
     }
   }
 
-  @media (max-width: 580px) {
+  @media (max-width: 780px) {
     .container {
       padding: 100px 16px 40px;
     }

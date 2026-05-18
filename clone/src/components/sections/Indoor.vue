@@ -56,7 +56,6 @@ onUnmounted(() => {
       </div>
 
       <div class="images-and-bars">
-        <!-- LEFT BARS -->
         <div class="bars-container left">
           <div class="sidebars bar1"></div>
           <div class="sidebars bar2"></div>
@@ -68,7 +67,6 @@ onUnmounted(() => {
           <div class="sidebars bar8"></div>
         </div>
 
-        <!-- RIGHT BARS -->
         <div class="bars-container right">
           <div class="sidebars bar1"></div>
           <div class="sidebars bar2"></div>
@@ -80,37 +78,35 @@ onUnmounted(() => {
           <div class="sidebars bar8"></div>
         </div>
 
-        <!-- IMAGES -->
         <div class="images-container">
+          <!-- Row 1: full-width image on mobile, 2 images on desktop -->
           <div class="row">
             <div class="img-container grid2c">
               <img src="@/assets/images/IndoorIntelligence1.svg" />
             </div>
-
             <div class="img-container hidden-on-mobile">
               <img src="@/assets/images/IndoorIntelligence2.jpg" />
             </div>
           </div>
 
+          <!-- Row 2: middle 2 images — mobile only -->
           <div class="row hidden-on-desktop">
             <div class="img-container">
               <img src="@/assets/images/IndoorIntelligence2.jpg" />
             </div>
-
             <div class="img-container">
               <img src="@/assets/images/IndoorIntelligence3.jpg" />
             </div>
           </div>
 
+          <!-- Row 3: bottom images -->
           <div class="row">
             <div class="img-container hidden-on-mobile">
               <img src="@/assets/images/IndoorIntelligence3.jpg" />
             </div>
-
             <div class="img-container">
               <img src="@/assets/images/IndoorIntelligence4.jpg" />
             </div>
-
             <div class="img-container">
               <img src="@/assets/images/IndoorIntelligence5.jpg" />
             </div>
@@ -129,6 +125,13 @@ section.jf-section--indoor-intelligence {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+
+  @media (max-width: 930px) {
+    height: auto;
+    min-height: unset;
+    overflow: visible;
+    padding: 40px 16px;
+  }
 
   @keyframes scaleIn {
     from {
@@ -167,6 +170,10 @@ section.jf-section--indoor-intelligence {
     position: relative;
     height: 100%;
     width: 0;
+
+    @media (max-width: 930px) {
+      display: none;
+    }
 
     &.left {
       position: absolute;
@@ -284,11 +291,19 @@ section.jf-section--indoor-intelligence {
     align-items: center;
     height: 100%;
 
+    @media (max-width: 930px) {
+      height: auto;
+    }
+
     .images-and-bars {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media (max-width: 930px) {
+        width: 100%;
+      }
 
       .images-container {
         z-index: 3;
@@ -304,13 +319,13 @@ section.jf-section--indoor-intelligence {
             display: none;
           }
         }
+
         .img-container {
           position: relative;
           height: 15vw;
           width: 15vw;
           overflow: hidden;
           opacity: 0;
-
           transform: scale(0.85);
           transition: transform 0.3s ease;
         }
@@ -352,6 +367,39 @@ section.jf-section--indoor-intelligence {
         .img-container:nth-child(8) {
           animation-delay: 0.8s;
         }
+
+        @media (max-width: 930px) {
+          width: 100%;
+
+          .row {
+            display: flex;
+            gap: 6px;
+
+            &.hidden-on-desktop {
+              display: flex;
+            }
+          }
+
+          .img-container {
+            height: 44vw;
+            width: 44vw;
+            flex: 1;
+          }
+
+          .row:first-child .img-container:first-child {
+            height: 56vw;
+            width: 100%;
+            flex: unset;
+          }
+
+          .grid2c {
+            width: 100%;
+          }
+
+          .hidden-on-mobile {
+            display: none;
+          }
+        }
       }
     }
 
@@ -365,6 +413,10 @@ section.jf-section--indoor-intelligence {
         line-height: 1.25em;
         letter-spacing: -0.7px;
         margin-bottom: 40px;
+
+        @media (max-width: 930px) {
+          font-size: 40px;
+        }
       }
 
       > p {
@@ -377,6 +429,13 @@ section.jf-section--indoor-intelligence {
         max-width: 1290px;
         margin-bottom: 64px;
         margin-left: 270px;
+
+        @media (max-width: 930px) {
+          font-size: 18px;
+          margin-left: 0;
+          margin-bottom: 32px;
+          padding: 0 8px;
+        }
       }
     }
   }

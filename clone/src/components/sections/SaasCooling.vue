@@ -303,6 +303,11 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss">
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .jf-section-cooling {
   background-image: url('@/assets/images/section-saas-cooling-technology_bg-v01-7680x2204.jpg');
   background-position: center;
@@ -321,9 +326,11 @@ onUnmounted(() => {
   justify-content: center;
   padding: 8px 16px;
 
-  @media (max-width: 980px) {
+  @media (max-width: 0px) {
     flex-direction: column;
     padding: 10px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -358,6 +365,10 @@ onUnmounted(() => {
 
 .left-col {
   padding-top: 10px;
+
+  @media (max-width: 980px) {
+    padding-left: 130px;
+  }
 }
 .wrapper-content {
   width: 100%;
@@ -600,7 +611,7 @@ onUnmounted(() => {
 
 @media (max-width: 880px) {
   .img-size {
-    width: 50px;
+    width: 850px;
   }
 }
 
@@ -711,7 +722,7 @@ onUnmounted(() => {
 }
 
 .button-label-2 {
-  min-width: 216px;
+  width: 216px;
   height: 40px;
   border-radius: 10px;
   background: red;
@@ -750,7 +761,7 @@ onUnmounted(() => {
 .right-col-content {
   position: relative;
 
-  top: -250px;
+  top: -290px;
   right: -95px;
 
   z-index: 2;
@@ -794,7 +805,7 @@ onUnmounted(() => {
 .subject {
   position: absolute;
 
-  bottom: 5px;
+  bottom: 13px;
   right: -280px;
 
   width: 800px;

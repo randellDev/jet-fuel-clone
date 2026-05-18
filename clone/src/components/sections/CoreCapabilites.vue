@@ -223,37 +223,41 @@ onUnmounted(() => {
 <style lang="scss">
 * {
   box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }
+
 .jf-section-core {
   display: flex;
   background-color: #231f20;
   width: 100%;
-  height: 100vh;
-  padding: 8px 16px;
+  min-height: 100vh;
+  padding: 40px 16px;
+  align-items: flex-start;
 }
+
 .core-row {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 80px;
-  padding-top: 0px;
   width: 100%;
 
-  @media (max-width: 968px) {
-    display: flex;
+  @media (max-width: 930px) {
     flex-direction: column;
-
+    gap: 10px;
     align-items: center;
   }
 }
 
 .left-col {
-  gap: 40px;
-  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title-content {
+  padding-top: 0;
+
   @keyframes slideFromRight {
     from {
       transform: translateX(50%);
@@ -281,7 +285,6 @@ onUnmounted(() => {
       transform: translateY(40px);
       opacity: 0;
     }
-
     to {
       transform: translateY(0);
       opacity: 1;
@@ -289,34 +292,17 @@ onUnmounted(() => {
   }
 
   > h3 {
-    font-weight: 600;
     font-size: 40px;
+    font-weight: 600;
     color: rgb(253, 22, 22);
     text-transform: uppercase;
-
-    @media (max-width: 968px) {
-      font-size: 35px;
-    }
   }
 
   > h2 {
-    font-weight: 600;
     font-size: 64px;
-    line-height: 100%;
-    text-transform: uppercase;
+    font-weight: 600;
     color: white;
-
-    @media (max-width: 968px) {
-      font-size: 57px;
-    }
-
-    @media (max-width: 868px) {
-      font-size: 55px;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 45px;
-    }
+    text-transform: uppercase;
   }
 }
 
@@ -324,75 +310,65 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 980px) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 780px) {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+  @media (max-width: 930px) {
+    margin-bottom: 0px;
+    width: 100%;
   }
 }
 
 .card-row {
   display: flex;
-  flex-direction: row;
   gap: 1px;
-  padding-bottom: 28px;
+  margin-bottom: 28px;
 
-  transition: transform 0.5s ease;
-
-  @media (max-width: 968px) {
-    display: flex;
+  @media (max-width: 930px) {
     flex-direction: column;
-    padding-bottom: 0px;
+    margin-bottom: 1px;
   }
 }
 
-.card-content {
+.card-content,
+.card-content-2 {
   display: flex;
-  flex-direction: row;
-  width: 519px;
-  height: 247px;
-  background-color: #32323266;
   gap: 20px;
-  padding: 16px 40px;
   align-items: center;
+
+  width: 100%;
+  max-width: 519px;
+  height: 247px;
+
+  background-color: #32323266;
+  padding: 16px 40px;
+
+  opacity: 0;
+  transition: transform 0.3s ease;
 }
 
 .card-content-2 {
-  display: flex;
-  flex-direction: row;
-  width: 519px;
-  height: 247px;
   background-color: #50505066;
-  gap: 20px;
   padding: 32px 40px;
-  align-items: center;
 }
 
-.zoom-on-hover {
-  display: inline-block;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateY(-9px);
+@media (max-width: 930px) {
+  .card-content,
+  .card-content-2 {
+    max-width: 100%;
+    height: auto;
   }
 }
+
 .card-text {
-  gap: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
   > span {
-    font-family: Quattrocento Sans;
     font-weight: 700;
     font-size: 24px;
     color: white;
   }
 
   > p {
-    font-family: Quattrocento Sans;
-    font-weight: 400;
     font-size: 18px;
     color: white;
   }
