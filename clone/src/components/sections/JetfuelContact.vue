@@ -186,6 +186,11 @@ import footer from '@/assets/images/stay-connected-bg.png';
 </template>
 
 <style lang="scss" scoped>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .jf-contact {
   background-image: url('@/assets/images/stay-connected-bg.png');
   background-repeat: no-repeat;
@@ -204,9 +209,12 @@ import footer from '@/assets/images/stay-connected-bg.png';
     gap: 120px;
     padding: 180px 210px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1080px) {
       gap: 80px;
       padding: 140px 100px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 530px;
     }
 
     @media (max-width: 1080px) {
@@ -238,8 +246,9 @@ import footer from '@/assets/images/stay-connected-bg.png';
         color: #c60000;
         text-transform: uppercase;
 
-        @media only screen and (max-width: 980px) {
+        @media only screen and (max-width: 930px) {
           font: size 49px;
+          padding-bottom: 30px;
         }
 
         @media only screen and (max-width: 580px) {
@@ -256,8 +265,8 @@ import footer from '@/assets/images/stay-connected-bg.png';
         display: block;
         word-break: break-word;
 
-        @media only screen and (max-width: 980px) {
-          font-size: 49px;
+        @media only screen and (max-width: 930px) {
+          font-size: 30px;
         }
         @media only screen and (max-width: 880px) {
           font-size: 45px;
@@ -286,6 +295,11 @@ import footer from '@/assets/images/stay-connected-bg.png';
             font-size: 34px;
             color: #ddd;
             line-height: 1.3;
+
+            @media (max-width: 930px) {
+              font-size: 37px;
+              white-space: nowrap;
+            }
           }
         }
 
@@ -298,6 +312,12 @@ import footer from '@/assets/images/stay-connected-bg.png';
             color: #ffffff;
             text-transform: uppercase;
             padding-bottom: 12px;
+
+            @media (max-width: 930px) {
+              margin-bottom: 30px;
+              margin-top: 30px;
+              font-size: 35px;
+            }
           }
           .contact-list {
             ul {
@@ -332,8 +352,8 @@ import footer from '@/assets/images/stay-connected-bg.png';
                     color: #ed1c24;
                   }
 
-                  @media (max-width: 980px) {
-                    font-size: 20px;
+                  @media (max-width: 930px) {
+                    font-size: 30px;
                   }
 
                   @media (max-width: 580px) {
@@ -352,8 +372,8 @@ import footer from '@/assets/images/stay-connected-bg.png';
             text-transform: uppercase;
             padding-bottom: 20px;
 
-            @media only screen and (max-width: 580px) {
-              font-size: 24px;
+            @media only screen and (max-width: 930px) {
+              font-size: 34px;
             }
           }
           .socials-row {
@@ -363,7 +383,7 @@ import footer from '@/assets/images/stay-connected-bg.png';
               justify-content: space-between;
               gap: 16px;
 
-              @media only screen and (max-width: 1080px) {
+              @media only screen and (max-width: 930px) {
                 flex-direction: column;
               }
               .socials-content-logo {
@@ -385,8 +405,8 @@ import footer from '@/assets/images/stay-connected-bg.png';
                     color: #ed1c24;
                   }
 
-                  @media (max-width: 980px) {
-                    font-size: 20px;
+                  @media (max-width: 930px) {
+                    font-size: 30px;
                   }
 
                   @media (max-width: 580px) {

@@ -36,6 +36,11 @@ import SaasCooling from '../sections/SaasCooling.vue';
 </template>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .snap-container {
   height: 100vh;
   overflow-y: scroll;

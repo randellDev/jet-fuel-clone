@@ -115,6 +115,11 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss" scoped>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 section.jf-section--indoor-intelligence {
   position: relative;
   background: #3e3c3e;
@@ -412,7 +417,9 @@ section.jf-section--indoor-intelligence {
         margin-bottom: 40px;
 
         @media (max-width: 930px) {
-          font-size: 40px;
+          font-size: 70px;
+          padding-top: 100px;
+          padding: 20px 20px;
         }
       }
 
@@ -428,16 +435,9 @@ section.jf-section--indoor-intelligence {
         margin-left: 270px;
 
         @media (max-width: 930px) {
-          font-size: 18px;
+          font-size: 28px;
           margin-left: 0;
           margin-bottom: 32px;
-          padding: 0 8px;
-        }
-
-        @media (max-width: 830px) {
-          font-size: 15px;
-          margin-left: 0;
-          margin-bottom: 24px;
           padding: 0 8px;
         }
       }

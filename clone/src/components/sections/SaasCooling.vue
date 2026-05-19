@@ -351,7 +351,7 @@ onUnmounted(() => {
 }
 .left-col-wrapper {
   width: 950px;
-  height: 890px;
+  height: 900px;
   display: flex;
   background-color: #e5e5e5;
   flex-direction: column;
@@ -377,7 +377,7 @@ onUnmounted(() => {
   padding-top: 10px;
 
   @media (max-width: 980px) {
-    padding-right: 33px;
+    padding-right: 3px;
   }
 }
 .wrapper-content {
@@ -396,8 +396,12 @@ onUnmounted(() => {
   }
 }
 .title-content {
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+
+  @media (max-width: 930px) {
+    margin-right: 130px;
+  }
 
   > svg {
     animation: slideFromRight 1.4s ease forwards;

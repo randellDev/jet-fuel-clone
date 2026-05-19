@@ -61,7 +61,6 @@ onUnmounted(() => {
           </button>
         </div>
 
-        <!-- RIGHT SIDE -->
         <div class="container-col-right">
           <div class="image-col">
             <div class="image-gap">
@@ -100,6 +99,11 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss" scoped>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .jf-section-saas {
   background-image: url('@/assets/images/section-industry_bg-v02-7680x2400.jpg');
   background-position: center;
@@ -111,94 +115,98 @@ onUnmounted(() => {
     height: 300px;
     padding-bottom: 830px;
   }
-}
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 180px;
-  padding: 120px 140px;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    padding: 120px 140px;
 
-  padding-bottom: 830px;
+    padding-bottom: 830px;
 
-  @media (max-width: 980px) {
-    flex-direction: column;
-    gap: 40px;
-    padding: 80px 40px;
-  }
-}
-
-.container-col-left {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-
-  @media (max-width: 930px) {
-    gap: 10px;
-  }
-
-  span {
-    font-weight: 600;
-    font-size: 70px;
-    text-transform: uppercase;
-    line-height: 110%;
-    color: white;
-
-    @media (max-width: 930px) {
-      font-size: 60px;
+    @media (max-width: 980px) {
+      flex-direction: column;
+      gap: 40px;
+      padding: 80px 40px;
     }
-  }
 
-  p {
-    font-size: 22px;
-    line-height: 130%;
-    color: white;
+    .container-col-left {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
 
-    @media (max-width: 930px) {
-      font-size: 26px;
+      @media (max-width: 930px) {
+        gap: 10px;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 70px;
+        text-transform: uppercase;
+        line-height: 110%;
+        color: white;
+
+        @media (max-width: 930px) {
+          font-size: 60px;
+        }
+      }
+
+      p {
+        font-size: 22px;
+        line-height: 130%;
+        color: white;
+
+        @media (max-width: 930px) {
+          font-size: 26px;
+        }
+      }
+
+      .button {
+        width: 334px;
+        height: 60px;
+        border-radius: 16px;
+        border: 2px solid red;
+        background: red;
+        cursor: pointer;
+
+        font-weight: 700;
+        font-size: 24px;
+        color: white;
+        text-transform: uppercase;
+      }
     }
-  }
-}
 
-.button {
-  width: 334px;
-  height: 60px;
-  border-radius: 16px;
-  border: 2px solid red;
-  background: red;
-  cursor: pointer;
+    .container-col-right {
+      display: flex;
 
-  font-weight: 700;
-  font-size: 24px;
-  color: white;
-  text-transform: uppercase;
-}
+      .image-col {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
 
-.container-col-right {
-  display: flex;
-}
+        .image-wrapper {
+          height: 45px;
+          width: 651px;
+          background: white;
+          padding: 13px 32px;
+          display: flex;
+          align-items: center;
 
-.image-col {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+          @media (max-width: 930px) {
+            width: 714px;
+          }
 
-.image-wrapper {
-  height: 45px;
-  width: 651px;
-  background: white;
-  padding: 13px 32px;
-  display: flex;
-  align-items: center;
+          span {
+            font-weight: 800;
+            font-size: 16px;
 
-  span {
-    font-weight: 800;
-    font-size: 16px;
-
-    @media (max-width: 930px) {
-      font-size: 30px;
+            @media (max-width: 930px) {
+              font-size: 30px;
+            }
+          }
+        }
+      }
     }
   }
 }
