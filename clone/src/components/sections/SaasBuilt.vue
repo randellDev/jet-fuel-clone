@@ -124,7 +124,7 @@ onUnmounted(() => {
 
   @media (max-width: 980px) {
     flex-direction: column;
-    gap: 80px;
+    gap: 40px;
     padding: 80px 40px;
   }
 }
@@ -133,6 +133,10 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: 930px) {
+    gap: 10px;
+  }
 
   span {
     font-weight: 600;
@@ -152,7 +156,7 @@ onUnmounted(() => {
     color: white;
 
     @media (max-width: 930px) {
-      font-size: 30px;
+      font-size: 26px;
     }
   }
 }
