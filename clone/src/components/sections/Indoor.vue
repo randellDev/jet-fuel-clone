@@ -114,7 +114,7 @@ onUnmounted(() => {
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 section.jf-section--indoor-intelligence {
   position: relative;
   background: #3e3c3e;
@@ -124,7 +124,7 @@ section.jf-section--indoor-intelligence {
   overflow: hidden;
 
   @media (max-width: 930px) {
-    height: auto;
+    height: 2000px;
     min-height: unset;
     overflow: visible;
     padding: 40px 16px;

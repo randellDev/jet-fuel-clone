@@ -44,7 +44,6 @@ onUnmounted(() => {
   >
     <div class="jf-section-saas">
       <div class="container">
-        <!-- LEFT SIDE -->
         <div class="container-col-left">
           <div class="title-wrap">
             <span>built for where people work & learn</span>
@@ -69,21 +68,27 @@ onUnmounted(() => {
               <div class="image-wrapper">
                 <span>Schools & Universities</span>
               </div>
-              <img :src="school" alt="Schools & Universities" />
+              <div class="img-size">
+                <img :src="school" alt="Schools & Universities" />
+              </div>
             </div>
 
             <div class="image-gap">
               <div class="image-wrapper">
                 <span>Logistics & Warehouse</span>
               </div>
-              <img :src="warehouse" alt="Logistics & Warehouse" />
+              <div class="img-size">
+                <img :src="warehouse" alt="Logistics & Warehouse" />
+              </div>
             </div>
 
             <div class="image-gap">
               <div class="image-wrapper">
                 <span>Manufacturing & Production Facilities</span>
               </div>
-              <img :src="manufacturing" alt="Manufacturing Facilities" />
+              <div class="img-size">
+                <img :src="manufacturing" alt="Manufacturing Facilities" />
+              </div>
             </div>
           </div>
         </div>
@@ -94,14 +99,18 @@ onUnmounted(() => {
   <RequestDemo v-if="showModal" @close="showModal = false" />
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .jf-section-saas {
   background-image: url('@/assets/images/section-industry_bg-v02-7680x2400.jpg');
   background-position: center;
   background-size: auto 100%;
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
+
+  @media (max-width: 980px) {
+    height: 300px;
+    padding-bottom: 830px;
+  }
 }
 
 .container {
@@ -111,9 +120,12 @@ onUnmounted(() => {
   gap: 180px;
   padding: 120px 140px;
 
+  padding-bottom: 830px;
+
   @media (max-width: 980px) {
     flex-direction: column;
     gap: 80px;
+    padding: 80px 40px;
   }
 }
 
@@ -128,12 +140,20 @@ onUnmounted(() => {
     text-transform: uppercase;
     line-height: 110%;
     color: white;
+
+    @media (max-width: 930px) {
+      font-size: 60px;
+    }
   }
 
   p {
     font-size: 22px;
     line-height: 130%;
     color: white;
+
+    @media (max-width: 930px) {
+      font-size: 30px;
+    }
   }
 }
 
@@ -172,6 +192,26 @@ onUnmounted(() => {
   span {
     font-weight: 800;
     font-size: 16px;
+
+    @media (max-width: 930px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.img-size img {
+  width: 100%;
+  height: 157px;
+  display: block;
+  object-position: center;
+  object-fit: cover;
+
+  @media (max-width: 930px) {
+    width: 714px;
+    height: 357px;
+    display: block;
+    object-position: center;
+    object-fit: cover;
   }
 }
 

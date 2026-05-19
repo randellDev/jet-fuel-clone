@@ -185,7 +185,7 @@ import footer from '@/assets/images/stay-connected-bg.png';
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .jf-contact {
   background-image: url('@/assets/images/stay-connected-bg.png');
   background-repeat: no-repeat;

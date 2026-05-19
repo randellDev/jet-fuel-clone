@@ -112,7 +112,9 @@ onUnmounted(() => {
             <div class="wrapper-content">
               <div class="image-container">
                 <div class="chart-01-animation">
-                  <img :src="chart01" alt="" />
+                  <div class="chart-01-size">
+                    <img :src="chart01" alt="" />
+                  </div>
                 </div>
                 <div class="item-col">
                   <ul class="weather-list">
@@ -132,7 +134,9 @@ onUnmounted(() => {
                   </ul>
                   <div class="zoom-on-hover">
                     <div class="chart08-animation">
-                      <img :src="chart08" alt="" />
+                      <div class="chart-08-img">
+                        <img :src="chart08" alt="" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -302,12 +306,12 @@ onUnmounted(() => {
   <RequestDemo v-if="showModal" @close="showModal = false" />
 </template>
 
-<style lang="scss">
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<style lang="scss" scoped>
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
 .jf-section-cooling {
   background-image: url('@/assets/images/section-saas-cooling-technology_bg-v01-7680x2204.jpg');
   background-position: center;
@@ -347,19 +351,25 @@ onUnmounted(() => {
 }
 .left-col-wrapper {
   width: 950px;
-  height: 100vh;
+  height: 890px;
   display: flex;
   background-color: #e5e5e5;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  overflow: hidden;
 
   animation: slideDown 0.8s ease-out;
 
-  @media (max-width: 980px) {
+  @media (max-width: 930px) {
     width: 100%;
-    height: auto;
+    height: 1900px;
     padding: 40px 20px;
+  }
+
+  @media (max-width: 880px) {
+    width: 100%;
+    height: 1910px;
   }
 }
 
@@ -367,7 +377,7 @@ onUnmounted(() => {
   padding-top: 10px;
 
   @media (max-width: 980px) {
-    padding-left: 130px;
+    padding-right: 33px;
   }
 }
 .wrapper-content {
@@ -481,6 +491,13 @@ onUnmounted(() => {
   }
 }
 
+.chart-08-img img {
+  @media (max-width: 930px) {
+    width: 800px;
+    height: auto;
+  }
+}
+
 .chart08-animation {
   transition: transform 0.3s ease;
 
@@ -547,7 +564,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 880px) {
+  @media (max-width: 980px) {
     align-items: center;
   }
 }
@@ -600,7 +617,7 @@ onUnmounted(() => {
 
 .img-size {
   width: 100%;
-  max-width: 220px;
+  max-width: 320px;
 }
 
 .img-size img {
@@ -610,8 +627,14 @@ onUnmounted(() => {
 }
 
 @media (max-width: 880px) {
+  .chart-01-size {
+    max-width: 880px;
+  }
+}
+
+@media (max-width: 880px) {
   .img-size {
-    width: 850px;
+    width: 950px;
   }
 }
 

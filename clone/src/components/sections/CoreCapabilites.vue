@@ -220,22 +220,26 @@ onUnmounted(() => {
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 .jf-section-core {
   display: flex;
   background-color: #231f20;
   width: 100%;
-  min-height: 100vh;
   padding: 40px 16px;
   align-items: flex-start;
-}
+  justify-content: center;
 
+  @media (max-width: 930px) {
+    min-height: unset;
+    height: 2010px;
+    padding: 32px 16px;
+  }
+}
 .core-row {
   display: flex;
   justify-content: center;
@@ -245,16 +249,24 @@ onUnmounted(() => {
 
   @media (max-width: 930px) {
     flex-direction: column;
-    gap: 10px;
     align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
   }
 }
 
 .left-col {
   display: flex;
   flex-direction: column;
-}
+  align-items: center;
+  margin-bottom: 0;
 
+  @media (max-width: 930px) {
+    align-items: center;
+    text-align: center;
+  }
+}
 .title-content {
   padding-top: 0;
 
@@ -309,6 +321,7 @@ onUnmounted(() => {
 .right-col {
   display: flex;
   flex-direction: column;
+  margin-bottom: 0;
 
   @media (max-width: 930px) {
     margin-bottom: 0px;
@@ -411,7 +424,6 @@ onUnmounted(() => {
   justify-content: center;
 }
 
-//glow
 .card-content > div:first-child::before,
 .card-content-2 > div:first-child::before {
   content: '';

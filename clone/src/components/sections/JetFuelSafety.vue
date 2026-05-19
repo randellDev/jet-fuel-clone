@@ -132,7 +132,7 @@ onUnmounted(() => {
 
   <RequestDemo v-if="showModal" @close="showModal = false" />
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
 }
@@ -465,6 +465,122 @@ onUnmounted(() => {
       h2 {
         font-size: 38px;
       }
+    }
+  }
+
+  @media (max-width: 980px) {
+    .container {
+      padding: 120px 20px 60px;
+    }
+
+    .jf-col-row {
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .jf-col-left {
+      max-width: 100%;
+      margin: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      h1 {
+        font-size: 120px;
+        padding-left: 30px;
+      }
+      h2 {
+        font-size: 70px;
+        margin-bottom: 24px;
+        padding-left: 30px;
+      }
+      h3 {
+        font-size: 22px;
+        margin-bottom: 40px;
+        padding-left: 30px;
+      }
+    }
+
+    .jf-col-right {
+      max-width: 100%;
+      width: 100%;
+    }
+    .weather-list {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .weather-item {
+      min-width: 140px;
+    }
+    .image-col {
+      flex-direction: column;
+    }
+    .image-gallery {
+      width: 100%;
+    }
+    .image-row,
+    .image-row2 {
+      justify-content: center;
+    }
+    .side-images {
+      width: 100%;
+    }
+    .zoom-on-hover img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  @media (max-width: 780px) {
+    .container {
+      padding: 100px 16px 40px;
+    }
+
+    .jf-col-left {
+      h1 {
+        font-size: 40px;
+        letter-spacing: -1px;
+      }
+      h2 {
+        font-size: 26px;
+      }
+      h3 {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .button-label {
+        width: 100%;
+        max-width: 320px;
+        font-size: 16px;
+        background: red;
+      }
+    }
+
+    .weather-list {
+      gap: 10px;
+      display: flex;
+      flex-direction: row;
+    }
+    .weather-item {
+      min-width: calc(50% - 10px);
+      font-size: 9px;
+      padding: 8px;
+    }
+    .image-row,
+    .image-row2 {
+      gap: 8px;
+    }
+    .image-gallery {
+      gap: 8px;
+    }
+    .chart-wrap {
+      gap: 10px;
+    }
+    .side-images {
+      gap: 8px;
     }
   }
 
