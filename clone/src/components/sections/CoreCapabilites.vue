@@ -236,8 +236,9 @@ onUnmounted(() => {
 
   @media (max-width: 930px) {
     min-height: unset;
-    height: 2010px;
+    height: 2070px;
     padding: 32px 16px;
+    padding-top: 300px;
   }
 }
 .core-row {
@@ -265,6 +266,8 @@ onUnmounted(() => {
   @media (max-width: 930px) {
     align-items: center;
     text-align: center;
+    margin-right: 95px;
+    padding-bottom: 30px;
   }
 }
 .title-content {
@@ -350,11 +353,22 @@ onUnmounted(() => {
   max-width: 519px;
   height: 247px;
 
-  background-color: #32323266;
   padding: 16px 40px;
+  background-color: #32323266;
+
+  box-sizing: border-box;
+  overflow: hidden;
 
   opacity: 0;
   transition: transform 0.3s ease;
+
+  @media (max-width: 930px) {
+    .card-content,
+    .card-content-2 {
+      height: 870px;
+      width: 100%;
+    }
+  }
 }
 
 .card-content-2 {
@@ -375,15 +389,27 @@ onUnmounted(() => {
   flex-direction: column;
   gap: 10px;
 
+  @media (max-width: 930px) {
+    gap: 20px;
+  }
+
   > span {
     font-weight: 700;
     font-size: 24px;
     color: white;
+
+    @media (max-width: 930px) {
+      font-size: 40px;
+    }
   }
 
   > p {
     font-size: 18px;
     color: white;
+
+    @media (max-width: 930px) {
+      font-size: 22px;
+    }
   }
 }
 
